@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/index.css" rel="stylesheet">
+    <script type="module" src="./src/logic/script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Gas Stations</title>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <div id="app-container" class="flex flex-col items-center py-10 px-4 max-w-5xl mx-auto">
+      <!-- Título principal con estilos mejorados -->
+      <h1 class="text-4xl font-extrabold text-white mb-8 px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg border-4 border-blue-800">
+          Gas Stations
+      </h1>
+
+      <!-- Contenedor de filtros -->
+      <div class="flex flex-wrap items-center gap-4 w-full bg-blue-50 p-4 rounded-lg shadow-md">
+          <!-- Select de provincias -->
+          <select id="province-select" class="flex-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none">
+              <option value="" disabled selected>Select a province</option>
+          </select>
+
+          <!-- Select de municipios -->
+          <select id="municipality-select" disabled class="flex-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none">
+              <option value="" disabled selected>Select a municipality</option>
+          </select>
+
+          <!-- Select de tipo de combustible -->
+          <select id="fuel-type-select" disabled class="flex-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-300 focus:outline-none">
+              <option value="" disabled selected>Select a fuel type</option>
+          </select>
+
+          <!-- Checkbox de gasolineras abiertas -->
+          <label for="open-now" class="flex items-center text-sm">
+              <input type="checkbox" id="open-now" class="mr-2 rounded text-blue-600 focus:ring-blue-300">
+              <span>Show only open gas stations</span>
+          </label>
+      </div>
+
+      <!-- Resultados -->
+      <div id="results" class="mt-8 w-full bg-white p-4 rounded-lg shadow text-center text-gray-500 space-y-4">
+          Please select a province, municipality, and fuel type to see the results.
+      </div>
+  </div>
+</body>
+
+</html>
